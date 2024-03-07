@@ -8,6 +8,9 @@ img {
     max-width: 100%;
 }
 
+section {
+    padding: 50px 0;
+}
 /* COMMON */
 /* Layout */
 .container {
@@ -17,7 +20,12 @@ img {
     border: 1px solid red;
 }
 
-
+.col {
+    width: 50%;
+    border-radius: 10px;
+    flex-grow: 1;
+    
+}
 
 /* Utilities */
 .p-t-50 {
@@ -83,26 +91,21 @@ img {
     /* height: 600px; */
 }
 
-.col {
+.service .col {
     width: 90%;
-    border-radius: 10px;
-    flex-grow: 1;
     /* debug */
     background-color: #86FA50;
     height: 100px;
 }
 
-#big {
-    flex-grow: 2;
-}
 
 @media screen and (min-width: 480px) {
-    .columns {
+    .service .columns {
         flex-direction: row;
         /* align-items: flex-start; */
     }
 
-   .col {
+   .service .col{
         height: 200px ;
         width: 28%;
         background-color: red;   
@@ -113,7 +116,50 @@ img {
    }
 }
 
-/* Strategic Section */
-.strategic {
+/* Planning Section */
+.planning {
     background-color: #9792E4;
+    /* debug */
+    /* height: 700px; */
+}
+
+.planning .col {
+    height: 200px;
+    width: 100%;
+    max-width: 480px;
+    background-color: blue;
+}
+
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 992px) {
+    .planning .columns {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .planning .col {
+        width: 48%;
+    }
+}
+
+
+/* Testimonial Section */
+.testimonial .col {
+    height: 200px;
+
+    max-width: 992px;
+    background-color: lightpink;
+}
+
+.testimonial .title {
+    background-color: yellow;
+}
+
+@media screen and (min-width: 480px) {
+    .testimonial .col, .testimonial .title{
+        width: 100%;
+    }
 }
