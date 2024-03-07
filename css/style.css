@@ -252,3 +252,23 @@ section {
     max-width: 768px;
     background-color: #86FA50;
 }
+
+/* FOOTER */
+.footer {
+    background-color: #333333;
+}
+
+.footer .columns {
+    flex-direction: column;
+    justify-content: space-between;
+    /* debug */
+    height: 200px;
+}
+
+.footer .col {
+    width: 100%;
+    max-width: 768px;
+    /* debug */
+    background-color: gray;
+    max-height: 50px;
+}
