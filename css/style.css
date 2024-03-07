@@ -204,3 +204,51 @@ section {
         width: 100%;
     }
 }
+
+
+/* About us Section */
+.about .col {
+    height: 200px;
+    background-color: #86FA50;
+}
+
+
+.about .title  {
+    background-color: orange;
+    width: 100%;
+    /* debug */
+    height: 100px;
+}
+
+@media screen and (min-width: 768px){
+    .about .container {
+        display: flex;
+    }
+
+    .about .col {
+        width: 50%;
+    }
+
+    .about .title  {
+        width: 100%;
+    }
+
+}
+
+@media  screen and (min-width: 992px) {
+    .about .col {
+        width: 100%;
+    }
+
+    .about .title  {
+        width: 100%;
+    }
+}
+
+/* Get started */
+.started .col {
+    width: 100%;
+    height: 200px;
+    max-width: 768px;
+    background-color: #86FA50;
+}
