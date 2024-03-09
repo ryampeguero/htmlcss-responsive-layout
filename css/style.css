@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 img {
     max-width: 100%;
 }
@@ -21,6 +25,20 @@ section {
     padding: 20px;
 }
 
+.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1140px;
+    /* debug */
+    border: 4px solid green;
+    /* height: 600px; */
+}
+
 .col {
     width: 60%;
     border-radius: 10px;
@@ -28,9 +46,31 @@ section {
     
 }
 
+.btn {
+    display: block;
+    padding: .5em 1em;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+    background-color: #0061FF;
+}
+
+.btn-big {
+    width: 100%;
+}
 /* Utilities */
 .p-t-100 {
     padding-top: 100px;
+}
+
+.p-tb-40 {
+    padding: 40px 0;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* Colors */
@@ -65,6 +105,13 @@ section {
     max-width: 992px;
 }
 
+.hamburger-menu-btn {
+    font-size: 1.6rem;
+    border: 0px;
+    color: white;
+    background-color: transparent;
+}
+
 @media screen and (min-width: 992px) {  
     
     .header ul {
@@ -84,27 +131,37 @@ section {
 
 /* MAIN */
 /* Services section */
-.columns {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1140px;
-    /* debug */
-    border: 4px solid green;
-    /* height: 600px; */
-}
 
 .service .col {
     width: 90%;
+    max-width: 525px;
     /* debug */
-    background-color: #86FA50;
-    height: 100px;
+    background-color: #B5DDFF;
+    /* height: 100px; */
 }
 
+.card {
+    padding: 10px 20px;
+}
+
+.card h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2797FD;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.card img {
+    min-width: 60%;
+    max-width: 100%;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+}
+
+.card-btn {
+    text-align: center;
+}
 
 @media screen and (min-width: 768px) {
     .service .columns {
@@ -113,26 +170,53 @@ section {
     }
 
    .service .col{
-        height: 200px ;
         width: 28%;
-        background-color: red;   
+        /* debug */
+        min-height: 200px ;
+        /* background-color: red;    */
    }
 
    #big {
         width: 56%;
+   }
+
+   #big .col {
+        width: 90%;
+        text-align: left;   
+   }
+
+   .card h2 {
+    font-size: 1.6rem;
+        text-align: left;
+    }
+
+   .card img {
+        min-width: 20%;
+        max-width: 200px;
+        /* text-align: center; */
+    }
+
+    .card-btn {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #big .col {
+        width: 28%;
+        text-align: left;   
    }
 }
 
 /* Planning Section */
 
 .planning .col {
-    height: 200px;
     width: 100%;
     max-width: 480px;
+    /* debug */
+    height: 200px;
     background-color: blue;
-}
 
-@media screen and (min-width: 768px) {
 
 }
 
@@ -140,6 +224,7 @@ section {
     .planning .columns {
         flex-direction: row;
         justify-content: center;
+        align-items: flex-end;
     }
 
     .planning .col {
